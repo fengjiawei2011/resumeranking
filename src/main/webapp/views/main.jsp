@@ -14,7 +14,6 @@
 
 
 <body>
-<a href="${pageContext.request.contextPath}/resumes/fengjiawei"> search</a>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/blocksit/blocksit.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>

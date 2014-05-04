@@ -10,6 +10,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.client.RestTemplate;
 
+import com.sjsu.cmpe282.resumeranking.repository.ResumeRep;
+
 
 
 @Configuration
@@ -20,7 +22,7 @@ public class MainConfig {
 	private DataSource mySqlDataSource() {
 		DriverManagerDataSource ds = new DriverManagerDataSource();		
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost:3306/ContentDiary?useUnicode=true&characterEncoding=gbk");
+		ds.setUrl("jdbc:mysql://localhost:3306/resumerank");
 		ds.setUsername("root");
 		ds.setPassword("root");
 		return ds;
@@ -28,7 +30,7 @@ public class MainConfig {
 	
 	
 	@Bean 
-	public JdbcTemplate movieJdbcTemplate() {		
+	public JdbcTemplate resumeJdbcTemplate() {		
 		return new JdbcTemplate(mySqlDataSource());
 	}
 	
@@ -37,14 +39,11 @@ public class MainConfig {
 		return new RestTemplate();
 	}
 	
-	/*@Bean
-	public RideoReviewRepository rideoReviewRepo() {
-		return new JdbcRideoReviewRepository();
+	@Bean
+	public ResumeRep resumeRep() {
+		return new ResumeRep();
 	}	
-	
-	
-	
-	
+	/*
 	@Bean
 	public AwsQueueManager sqsManager() {
 		return new AwsQueueManager();
