@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.client.RestTemplate;
 
+import com.sjsu.cmpe282.resumeranking.repository.JobRep;
 import com.sjsu.cmpe282.resumeranking.repository.ResumeRep;
 
 
@@ -43,6 +44,12 @@ public class MainConfig {
 	public ResumeRep resumeRep() {
 		return new ResumeRep();
 	}	
+	
+	@Bean
+	public JobRep jobRep() {
+		return new JobRep();
+	}
+	
 	/*
 	@Bean
 	public AwsQueueManager sqsManager() {
