@@ -2,27 +2,21 @@
  * 
  */
 $(document).ready(function(){
+	resume_id = "";
 	
-	$('#postJobForm').submit(function(e){
-		e.preventDefault();
-		postForm = $(this).serialize();
-		$.ajax({
-			url : "/resumeranking/postjob",
-			type : 'POST',
-			data: postForm,
-			success : function(data) {
-				$('.close').click();
-				console.log(data);
-				callme();
-			},
-			error : function() {
-				$('.close').click();
-				alert("error");
-			}
-		});
+	$('#subsearch').click(function(){
+		$('#searchForm').submit();
 	});
-	
-	function layout(){
-		alert("call nme");
-	}
+	 $('.trigger').hover(function(){
+		  resume_id = $(this).attr("resume_id");
+	      $("#"+resume_id).dialog({
+	    	  height: 700,
+	      	  width: 750
+	      });
+	  }); 
+	 
+	 $('html').click(function() {
+		 $("#"+resume_id).dialog("close");
+	 });
+
 });

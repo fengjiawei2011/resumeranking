@@ -28,11 +28,11 @@
 		<div class="row">
 			<div class="col-lg-7">
 				<div class="input-group">
-					<form action="${pageContext.request.contextPath}/resumes">
-						<input type="text" class="form-control" name="jobTitle" placeholder="input a job title or major">
+					<form id="searchForm" action="${pageContext.request.contextPath}/search">
+						<input type="text" class="form-control" name="keywords" placeholder="input a job title or major">
 					</form>
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Go Search</button>
+						<button id="subsearch" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
 					</span>
 
 				</div>

@@ -3,6 +3,7 @@ package com.sjsu.cmpe282.resumeranking.model;
 public class Resume {
 	private int id;
 	private String resumeId;
+	private String resumeName;
 	private String resumeDownloadLink;
 	private String resumeLink;
 	private int bachelorSchool;
@@ -12,6 +13,14 @@ public class Resume {
 	private String city;
 	private String state;
 	private String country;
+	private String keywords;
+	
+	public String getKeywords() {
+		return keywords;
+	}
+	public void setKeywords(String keywords) {
+		this.keywords = keywords;
+	}
 	public int getId() {
 		return id;
 	}
@@ -20,6 +29,13 @@ public class Resume {
 	}
 	public String getResumeId() {
 		return resumeId;
+	}
+	
+	public String getResumeName() {
+		return resumeName;
+	}
+	public void setResumeName(String resumeName) {
+		this.resumeName = resumeName;
 	}
 	public void setResumeId(String resumeId) {
 		this.resumeId = resumeId;

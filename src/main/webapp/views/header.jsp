@@ -4,10 +4,16 @@
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/jquery-ui-1.10.4.min.css">
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script
 	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/js/jquery-ui-1.10.4.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/js/jquery-ui-1.10.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/myjs.js"></script>
 </head>
 <body>
@@ -21,7 +27,8 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Resume Ranking</a>
+				<a class="navbar-brand" href="${pageContext.request.contextPath}/">Resume
+					Ranking</a>
 			</div>
 
 			<!-- Modal -->
@@ -35,7 +42,9 @@
 							<h4 class="modal-title" id="myModalLabel">Post a Job</h4>
 						</div>
 						<div class="modal-body">
-							<form id="postJobForm" role="form">
+							<form id="postJobForm1"
+								action="${pageContext.request.contextPath}/postjob"
+								method="POST" role="form">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Company Name</label> <input
 										type="" text"" class="form-control" id="company"
@@ -57,7 +66,8 @@
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default"
 										data-dismiss="modal">Close</button>
-									<input id="post" type="submit" value="Post"  class="btn btn-primary">
+									<input id="post" type="submit" value="Post"
+										class="btn btn-primary">
 								</div>
 							</form>
 						</div>
@@ -73,6 +83,15 @@
 					<li><a data-toggle="modal" data-target="#myModal" href="#">post
 							job &raquo;</a></li>
 				</ul>
+
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default"><label class="glyphicon glyphicon-search"></label></button>
+				</form>
+
+
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>

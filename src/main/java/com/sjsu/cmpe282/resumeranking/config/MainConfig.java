@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.sjsu.cmpe282.resumeranking.repository.JobRep;
 import com.sjsu.cmpe282.resumeranking.repository.ResumeRep;
+import com.sjsu.cmpe282.resumeranking.service.Crawler;
 
 
 
@@ -49,6 +50,12 @@ public class MainConfig {
 	public JobRep jobRep() {
 		return new JobRep();
 	}
+	@Bean
+	public Crawler crawler(){
+		return new Crawler();
+	}
+	
+	
 	
 	/*
 	@Bean
