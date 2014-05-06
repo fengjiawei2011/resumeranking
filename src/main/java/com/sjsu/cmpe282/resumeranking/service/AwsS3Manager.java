@@ -20,8 +20,10 @@ public class AwsS3Manager {
 
 	public static final int S3_URL_EXP_MINUTE = 180;
 
-	private final static String ACCESS_KEY_ID = "AKIAIH55EOOYUNENJPEQ";
-	private final static String SECRET_ACCESS_KEY = "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";
+	/*private final static String ACCESS_KEY_ID = "AKIAIH55EOOYUNENJPEQ";
+	private final static String SECRET_ACCESS_KEY = "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";*/
+	private final static String ACCESS_KEY_ID ="";
+	private final static String SECRET_ACCESS_KEY = "";
 	private static String bucketName = "resume-ranking-dataset";
 	private String resultFolder = "resume/";
 
